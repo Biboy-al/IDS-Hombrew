@@ -8,7 +8,7 @@ This HIDS will utilize a signature based detection method. Pre-defined rules wil
 
 This system will have a central IDS managment system, and agents. These agents can be despiresd to certain locations to focus on detecting objects.
 
-Main Functionaliies:
+Main Functionality:
 --------------------
 * have modifiable rules that the users can change
 * 
@@ -37,6 +37,13 @@ Will draw inspiration from:
 
 * tripwire
 
+
+Components:
+-----------
+* IDS manager - will log, and analyse the data given by the agents
+* Agent(s) - Will collect the data from the host
+* Database - Will house the signatures of the attacks
+* Communication channel - these componets will be it's own process and will utilize socket-based communications.
 
 Further Reading:
 -----------------
