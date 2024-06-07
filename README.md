@@ -11,7 +11,7 @@ This system will have a central IDS managment system, and agents. These agents c
 Main Functionality:
 --------------------
 * have modifiable rules that the users can change
-* 
+ 
 * Monitors the:
   * Internal Systems
     
