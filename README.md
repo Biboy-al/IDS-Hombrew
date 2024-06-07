@@ -49,5 +49,6 @@ Further Reading:
 -----------------
 
 * [What is HIDS](https://www.bulletproof.co.uk/blog/host-based-intrusion-detection-systems)
+* [OSSEC HIDS setup](https://www.youtube.com/watch?v=7c8xowHz0Ko&ab_channel=AkamaiDeveloper)
 
 
