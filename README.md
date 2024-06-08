@@ -2,9 +2,10 @@
 
 What Will this do?
 ------------------
-This project is about making a host-based IDS that will monitor the anomalies activity of a host. This will be mainly a FIM (File Integrity Monitoring) system.
+This project is about making a host-based IDS that will monitor the anomalies activity of a host. This will be both a FIM (File Integrity Monitoring) and HIDS system.
 
-This HIDS will utilize a signature based detection method. Pre-defined rules will be setup inorder to focus on certain objects.
+This HIDS will utilize a signature based detection method. Pre-defined rules will be setup inorder to focus on certain objects. For file integrity, the system will generate a hash of each file, where it will be used to generate a snapshot of the system. 
+The snap shot will go on and be used to detect any anomalies 
 
 This system will have a central IDS managment system, and agents. These agents can be despiresd to certain locations to focus on detecting objects.
 
@@ -42,7 +43,9 @@ Components:
 -----------
 * IDS manager - will log, and analyse the data given by the agents
 * Agent(s) - Will collect the data from the host
-* Database - Will house the signatures of the attacks
+* Database - Will have cryptorgraphc information about the files being monitored:
+  * Hashes and checksums
+  * Digital signatures
 * Communication channel - these componets will be it's own process and will utilize socket-based communications.
 
 Further Reading:
@@ -50,5 +53,7 @@ Further Reading:
 
 * [What is HIDS](https://www.bulletproof.co.uk/blog/host-based-intrusion-detection-systems)
 * [OSSEC HIDS setup](https://www.youtube.com/watch?v=7c8xowHz0Ko&ab_channel=AkamaiDeveloper)
+* [How Tripewide checks for file integrity](https://manpages.ubuntu.com/manpages/focal/man8/tripwire.8.html#:~:text=Using%20the%20policy%20file%20rules,in%20the%20Tripwire%20configuration%20file.)
+* [How snort checks fo anomalies](https://www.zenarmor.com/docs/network-security-tutorials/what-is-snort#:~:text=Snort%20uses%20both%20anomaly%2Dbased,identify%20potentially%20harmful%20network%20activities.)
 
 
