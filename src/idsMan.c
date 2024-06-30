@@ -5,7 +5,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-const int PORT = 8888332;
+const int PORT = 8888;
 const int BUFFERSIZE = 100;
 
 int sockfd;
@@ -17,11 +17,13 @@ int main(){
 
 	char buffer[BUFFERSIZE];
 
-	printf("I am the IDS managment system");
+	printf("I am the IDS managment system\n");
 
 	createSocket();
 
-	recvfrom(sockfd,buffer, sizeof(buffer),0,(struct sockaddr*)&clientAddr,&clientAddrSize);
+	printf("Listening for incoming messages...\n\n");
+
+	checkError(recvfrom(sockfd,buffer, sizeof(buffer),0,(struct sockaddr*)&clientAddr,&clientAddrSize), "Cannot recive messages right now.");
 
 	printf("%s", buffer);
 
@@ -31,7 +33,7 @@ int main(){
 
 int createSocket(){
 
-	sockfd = checkError(socket(AF_LOCAL, SOCK_DGRAM, 0), "Socket Failed");
+	sockfd = checkError(socket(AF_INET, SOCK_DGRAM, 0), "Socket Failed");
 
 	address.sin_family = AF_INET;
 	address.sin_addr.s_addr = inet_addr("127.0.0.1");
@@ -45,7 +47,7 @@ int createSocket(){
 
 int checkError(int output, char msg[]){
 	if(output < 0){
-		printf("%s",msg);
+		perror(msg);
 		exit(EXIT_FAILURE);
 	}
 
