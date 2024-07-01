@@ -60,6 +60,20 @@ Components:
 CheckList:
 -----------
 
+- [x] Implement the communication Method
+  - [x] sockets
+- [ ] Implement the file system agent
+  - [ ] Implement the hashing function
+  - [ ] Checks if this hashing function is being changed
+- [ ] Implement the network agent
+- [ ] Implement managment system functionality
+  - [ ] Add new rules
+  - [ ] Have a alert of something is not write
+  - [ ] Logs activity in a file
+- [ ] Implement persistent storage
+  - [ ] persistent storage for known network attacks
+  - [ ] Persistent storage for hashes 
+     
 
 Further Reading:
 -----------------
