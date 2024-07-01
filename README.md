@@ -58,6 +58,9 @@ Components:
   * Digital signatures
 * Communication channel - these componets will be it's own process and will utilize socket-based communications.
 
+Secure Algorithms Used:
+----------------------
+* will use MD2 hash function to hash directories (use openssl/md2.h)
 
 CheckList:
 -----------
