@@ -20,6 +20,7 @@ Main Functionality:
     * Checks for file access
     * Running new process
     * Show system logs
+    * The managment system itself will hash these files when sensors are placed
       
   * Network activity
     
@@ -33,6 +34,7 @@ Main Functionality:
       * ID | Event Time | Location
         
 * Will use a Socket communication method to have the host managment system talk to the agents.
+
      
 
 Will draw inspiration from:
