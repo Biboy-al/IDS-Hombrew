@@ -7,7 +7,7 @@ This project is about making a host-based IDS that will monitor the anomalies ac
 This HIDS will utilize a signature based detection method. Pre-defined rules will be setup inorder to focus on certain objects. For file integrity, the system will generate a hash of each file, where it will be used to generate a snapshot of the system. 
 The snap shot will go on and be used to detect any anomalies 
 
-This system will have a central IDS managment system, and agents. These agents can be despiresd to certain locations to focus on detecting objects.
+This system will have a central IDS managment system, and agents. These agents are placed on diffrent hosts.
 
 Main Functionality:
 --------------------
@@ -31,6 +31,8 @@ Main Functionality:
     * The events in question will have this format:
       
       * ID | Event Time | Location
+        
+* Will use a Socket communication method to have the host managment system talk to the agents.
      
 
 Will draw inspiration from:
@@ -42,11 +44,22 @@ Will draw inspiration from:
 Components:
 -----------
 * IDS manager - will log, and analyse the data given by the agents
-* Agent(s) - Will collect the data from the host
+* Agent(s) - Will collect the data from the host:
+  * Network Agent
+    * Looks at the incoming traffic
+    * Sends this data to the managment system 
+  * File System Agent
+    * Looks at the hashes of the file system objects perodically
+    * Reports it back to the managment system 
 * Database - Will have cryptorgraphc information about the files being monitored:
   * Hashes and checksums
   * Digital signatures
 * Communication channel - these componets will be it's own process and will utilize socket-based communications.
+
+
+CheckList:
+-----------
+
 
 Further Reading:
 -----------------
