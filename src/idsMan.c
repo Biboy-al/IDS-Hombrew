@@ -4,21 +4,33 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <openssl/md2.h>
+#include "Hash.h"
 
 const int PORT = 8888;
 const int BUFFERSIZE = 100;
+
+char filePath[] = "/home/biboy/ids/test";
 
 int sockfd;
 
 struct sockaddr_in address, clientAddr;
 int clientAddrSize = sizeof(clientAddr);
+char buffer[100] ="dwad";
 
 int main(){
 
-	char buffer[BUFFERSIZE];
-
 	printf("I am the IDS managment system\n");
 
+	char *digest = hashFile("awdawd");
+
+	printf("%s", digest);
+
+	return 0;
+}
+
+
+void runSocket(){
 	createSocket();
 
 	printf("Listening for incoming messages...\n\n");
@@ -28,7 +40,6 @@ int main(){
 	printf("%s", buffer);
 
 	close(sockfd);
-	return 0;
 }
 
 int createSocket(){
