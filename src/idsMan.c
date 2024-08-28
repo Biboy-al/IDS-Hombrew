@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <openssl/md2.h>
 #include "Hash.h"
+#include "errorHand.h"
 
 const int PORT = 8888;
 const int BUFFERSIZE = 100;
