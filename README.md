@@ -60,7 +60,7 @@ Components:
 
 Secure Algorithms Used:
 ----------------------
-* will use MD2 hash function to hash directories (use openssl/md2.h)
+* will use SHA256 hash function to hash directories (use openssl/md2.h)
 
 CheckList:
 -----------
