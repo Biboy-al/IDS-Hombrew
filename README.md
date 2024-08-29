@@ -67,10 +67,13 @@ CheckList:
 
 - [x] Implement the communication Method
   - [x] sockets
-- [ ] Implement the file system agent
-  - [ ] Implement the hashing function
-  - [ ] Checks if this hashing function is being changed
 - [ ] Implement the network agent
+  - [ ] Implement the file system functionality
+    - [ ] Implement the hashing function
+    - [ ] Checks if this hashing function is being changed
+  - [ ] Implement The network sniffing functionality
+    - [ ] Sniff the network
+    - [ ] Send the packets to the managment system
 - [ ] Implement managment system functionality
   - [ ] Add new rules
   - [ ] Have a alert of something is not write
