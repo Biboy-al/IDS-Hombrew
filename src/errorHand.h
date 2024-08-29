@@ -10,3 +10,12 @@ int checkError(int output, char msg[]){
 
 	return output;
 }
+
+void* checkNull(void *output, char msg[]){
+    if(output == NULL){
+        perror(msg);
+        exit(EXIT_FAILURE);
+    }
+
+    return output;
+}

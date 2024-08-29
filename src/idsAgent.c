@@ -5,6 +5,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include "errorHand.h"
+#include "pCap.h"
 
 const int MANAPORT = 8888;
 
@@ -23,6 +24,8 @@ int main(){
 
 	close(sockfd);
 }
+
+
 
 //creates a socket to communicate with the IDS managment system 
 

@@ -56,13 +56,3 @@ int createSocket(){
 	return 0;
 
 }
-
-int checkError(int output, char msg[]){
-	if(output < 0){
-		perror(msg);
-		exit(EXIT_FAILURE);
-	}
-
-	return output;
-}
-
