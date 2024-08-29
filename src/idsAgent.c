@@ -4,8 +4,11 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
-#include "errorHand.h"
-#include "pCap.h"
+#include <stdio.h>
+#include <pcap/pcap.h>
+
+#include "include/pCap.h"
+#include "include/errorHand.h"
 
 const int MANAPORT = 8888;
 
@@ -17,15 +20,22 @@ int sockfd;
 
 char IP[] = "127.0.0.1";
 
+
+void readPacket(const unsigned char *args, const struct pcap_pkthdr *header, const unsigned char *packet);
+
 int main(){
 	printf("Hello World");
 
-	createSocket();
+	//createSocket();
 
-	close(sockfd);
+	//close(sockfd);
+
+	struct sniffer *sniff = initSinffer("eth0");
+
+	startCap(sniff, readPacket);
+
+
 }
-
-
 
 //creates a socket to communicate with the IDS managment system 
 
@@ -42,4 +52,9 @@ int createSocket(){
 	 printf("message Sent");
 	return 0;
 
+}
+
+void readPacket(const unsigned char *args, const struct pcap_pkthdr *header, const unsigned char *packet){
+
+	printf("packet Recived\n");
 }
