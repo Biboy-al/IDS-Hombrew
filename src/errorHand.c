@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-int checkError(int output, char msg[]){
+#include "include/errorHand.h"
+
+static int checkError(int output, char msg[]){
 	if(output < 0){
 		perror(msg);
 		exit(EXIT_FAILURE);
@@ -11,7 +13,7 @@ int checkError(int output, char msg[]){
 	return output;
 }
 
-void* checkNull(void *output, char msg[]){
+static void* checkNull(void *output, char msg[]){
     if(output == NULL){
         perror(msg);
         exit(EXIT_FAILURE);
