@@ -69,10 +69,10 @@ CheckList:
   - [x] sockets
 - [ ] Implement the network agent
   - [ ] Implement the file system functionality
-    - [ ] Implement the hashing function
-    - [ ] Checks if this hashing function is being changed
+    - [X] Implement the hashing function
+    - [ ] Use it to on a file and check if the hash has been changed
   - [ ] Implement The network sniffing functionality
-    - [ ] Sniff the network
+    - [X] Sniff the network
     - [ ] Send the packets to the managment system
 - [ ] Implement managment system functionality
   - [ ] Add new rules
