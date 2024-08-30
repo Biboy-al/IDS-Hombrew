@@ -8,6 +8,8 @@ struct sniffer *initSinffer(char *interface){
 
     struct sniffer *sniff;
 
+    sniff = malloc(sizeof(struct sniffer));
+
     struct pcap_pkthdr header;
         
     char *dev = pcap_lookupdev(interface);
@@ -16,7 +18,7 @@ struct sniffer *initSinffer(char *interface){
 
     sniff->interface = interface;
 
-    pcap_t *cap = pcap_open_live(interface, BUFSIZ, 0, 1000, sniff->errorBuf);
+    pcap_t *cap = pcap_open_live(interface, BUFSIZ, 1, 1000, sniff->errorBuf);
 
     checkNull(sniff, "Cannot create sniffing agent");
 

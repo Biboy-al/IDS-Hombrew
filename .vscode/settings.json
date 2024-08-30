@@ -4,6 +4,8 @@
         "stdio.h": "c",
         "unistd.h": "c",
         "errorhand.h": "c",
-        "hash.h": "c"
-    }
+        "hash.h": "c",
+        "pcap.h": "c"
+    },
+    "makefile.makefilePath": "/root/project/src/makefile"
 }

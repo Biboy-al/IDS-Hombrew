@@ -4,7 +4,7 @@
 
 #include "include/errorHand.h"
 
-static int checkError(int output, char msg[]){
+int checkError(int output, char msg[]){
 	if(output < 0){
 		perror(msg);
 		exit(EXIT_FAILURE);
@@ -13,7 +13,8 @@ static int checkError(int output, char msg[]){
 	return output;
 }
 
-static void* checkNull(void *output, char msg[]){
+
+void* checkNull(void *output, char msg[]){
     if(output == NULL){
         perror(msg);
         exit(EXIT_FAILURE);
