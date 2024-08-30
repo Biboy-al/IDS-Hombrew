@@ -90,5 +90,6 @@ Further Reading:
 * [OSSEC HIDS setup](https://www.youtube.com/watch?v=7c8xowHz0Ko&ab_channel=AkamaiDeveloper)
 * [How Tripewide checks for file integrity](https://manpages.ubuntu.com/manpages/focal/man8/tripwire.8.html#:~:text=Using%20the%20policy%20file%20rules,in%20the%20Tripwire%20configuration%20file.)
 * [How snort checks fo anomalies](https://www.zenarmor.com/docs/network-security-tutorials/what-is-snort#:~:text=Snort%20uses%20both%20anomaly%2Dbased,identify%20potentially%20harmful%20network%20activities.)
+* [How to use libpcap in C](https://www.tcpdump.org/pcap.html)
 
 
