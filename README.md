@@ -46,11 +46,13 @@ Will draw inspiration from:
 Components:
 -----------
 * IDS manager - will log, and analyse the data given by the agents
+  * Logs the traffic seen in some form of persistent storage
+  * Analyses and alerts(through the interface) of any anomalous behaviour
 * Agent(s) - Will collect the data from the host:
-  * Network Agent
+  * Network functionality
     * Looks at the incoming traffic
     * Sends this data to the managment system 
-  * File System Agent
+  * File System functionality
     * Looks at the hashes of the file system objects perodically
     * Reports it back to the managment system 
 * Database - Will have cryptorgraphc information about the files being monitored:
@@ -60,14 +62,14 @@ Components:
 
 Secure Algorithms Used:
 ----------------------
-* will use SHA256 hash function to hash directories (use openssl/md2.h)
+* will use SHA256 hash function to hash directories/files (use openssl/md2.h)
 
 CheckList:
 -----------
 
 - [x] Implement the communication Method
   - [x] sockets
-- [ ] Implement the network agent
+- [ ] Implement the agent
   - [ ] Implement the file system functionality
     - [X] Implement the hashing function
     - [ ] Use it to on a file and check if the hash has been changed
@@ -76,7 +78,7 @@ CheckList:
     - [ ] Send the packets to the managment system
 - [ ] Implement managment system functionality
   - [ ] Add new rules
-  - [ ] Have a alert of something is not write
+  - [ ] Have a alerts of triggered rules
   - [ ] Logs activity in a file
 - [ ] Implement persistent storage
   - [ ] persistent storage for known network attacks
