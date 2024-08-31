@@ -91,5 +91,6 @@ Further Reading:
 * [How Tripewide checks for file integrity](https://manpages.ubuntu.com/manpages/focal/man8/tripwire.8.html#:~:text=Using%20the%20policy%20file%20rules,in%20the%20Tripwire%20configuration%20file.)
 * [How snort checks fo anomalies](https://www.zenarmor.com/docs/network-security-tutorials/what-is-snort#:~:text=Snort%20uses%20both%20anomaly%2Dbased,identify%20potentially%20harmful%20network%20activities.)
 * [How to use libpcap in C](https://www.tcpdump.org/pcap.html)
+* [Components in a IDS](https://www.tookitaki.com/glossary/intrusion-detection-system-ids#:~:text=Key%20Components%20of%20IDS,-An%20IDS%20comprises&text=Sensors%3A%20Gather%20raw%20data%2C%20often,configure%2C%20and%20control%20the%20IDS)
 
 
